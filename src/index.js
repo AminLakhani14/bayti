@@ -7,6 +7,7 @@ import ConsentMinorEnglishUAE from './ConsentMinorEnglishUAE';
 import ConsentMinorArabicUAE from './ConsentMinorArabicUAE';
 import ConsentAdultArabicUAE from './ConsentAdultArabicUAE';
 import Homepage from './homepage'; // Note: Component names should be capitalized
+import { ThankYou } from './thankyou';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
           <Route path="adult-ar" element={<ConsentAdultArabicUAE />} />
           <Route path="child-en" element={<ConsentMinorEnglishUAE />} />
           <Route path="child-ar" element={<ConsentMinorArabicUAE />} />
+          <Route path="thankyou" element={<ThankYou />} />
         </Route>
       </Routes>
     </HashRouter>

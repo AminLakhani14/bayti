@@ -86,8 +86,9 @@ const ConsentAdultArabicUAE = () => {
 
   <p>لممارسة حقوق حماية البيانات الخاصة بك، يمكنك التواصل مع شركة بياني للرعاية الصحية المنزلية عبر:</p>
   
-  <p style="text-align: center;">(i) البريد الإلكتروني: pspsafety@baytihhc.com، أو</p>
-  <p style="text-align: center;">(ii) الهاتف: 800 – BAYTI (22984)</p>
+  <p style="text-align: center;">(i)أوالبريد الإلكتروني: pspsafety@baytihhc.com،</p>
+  <p style="text-align: center;">(ii) 800 - BAYTI (22984)</p>
+  
 
   <h3>هـ. إزالة الهوية والاستخدام الثانوي</h3>
   <p>كما ذكر أعلاه، فإن الوصول إلى بياناتك الشخصية كجزء من البرنامج سيكون محدوداً للغاية. خارج نطاق البرنامج، قد تحتاج مجموعة سانوفي والسلطات الصحية إلى إعادة استخدام البيانات التي يوفرها البرنامج لفهم ملف السلامة الخاص بالدواء بشكل أفضل، وذلك لتحسين الإدارة العامة للمرض. وهذا ما يسمى بالاستخدام الثانوي.</p>
@@ -213,6 +214,7 @@ const ConsentAdultArabicUAE = () => {
               fontSize: "14px",
               cursor: isChecked ? "pointer" : "not-allowed",
               opacity: isChecked ? 1 : 0.3,
+              borderRadius: '4px',
             }}
             onClick={isChecked ? handleSubmitClick : null}
             disabled={!isChecked}

@@ -82,6 +82,7 @@
     font-size: 16px;
     opacity: 1;
     cursor: pointer;
+    border-radius: 4px;
   }
 
   .cancel-btn:disabled {
@@ -112,6 +113,7 @@
     font-size: 16px;
     width: 100%;
     cursor: pointer;
+    border-radius: 4px;
   }
 
   .submit-btn:disabled {
@@ -313,3 +315,97 @@
       font-size: 1rem;
     }
   }
+
+
+  /* Loader styles */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Close icon in top right corner */
+.close-icon-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-icon-btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Footer buttons layout */
+.modal-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.close-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Adjust submit button to work with new layout */
+.modal-footer-actions .submit-btn {
+  margin-top: 0;
+  margin-right: 0;
+  width: auto;
+  min-width: 100px;
+}
+
+/* Make modal content relative for positioning the close icon */
+.modal-content {
+  position: relative;
+  /* rest of your existing styles */
+}
