@@ -50,8 +50,8 @@ const ArabicConsentModal = ({
       formData.email.trim() !== "" &&
       formData.homeAddress.trim() !== "" &&
       formData.city.trim() !== "" &&
-      formData.treatingPhysician.trim() !== "" &&
-      formData.treatingFacility.trim() !== "" &&
+      // formData.treatingPhysician.trim() !== "" &&
+      // formData.treatingFacility.trim() !== "" &&
       isSigned;
 
     if (formType === "Minor") {

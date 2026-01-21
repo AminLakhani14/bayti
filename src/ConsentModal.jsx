@@ -50,8 +50,8 @@ const ConsentModal = ({
       formData.email.trim() !== "" &&
       formData.homeAddress.trim() !== "" &&
       formData.city.trim() !== "" &&
-      formData.treatingPhysician.trim() !== "" &&
-      formData.treatingFacility.trim() !== "" &&
+      // formData.treatingPhysician.trim() !== "" &&
+      // formData.treatingFacility.trim() !== "" &&
       isSigned;
 
     // Additional validation for minor forms
