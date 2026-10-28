@@ -60,7 +60,8 @@ const ConsentModal = ({
         isValid &&
         formData.relationship.trim() !== "" &&
         (formData.relationship !== "5" ||
-          formData.otherRelationship.trim() !== "");
+          formData.otherRelationship.trim() !== "") &&
+        formData.guardianName.trim() !== "";
     }
 
     setIsFormValid(isValid);
@@ -160,6 +161,7 @@ const ConsentModal = ({
         ...(formType === "Minor" && {
           relationship: relationshipValue,
           otherRelationship: otherRelationshipValue,
+          guardianName: formData.guardianName,
         }),
       };
 
@@ -317,6 +319,30 @@ const ConsentModal = ({
                     {errors.otherRelationship && (
                       <span className="error-message">
                         {errors.otherRelationship}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {formData.relationship !== "" && (
+                <div className="form-row">
+                  <div
+                    className={`form-group ${
+                      errors.guardianName ? "error" : ""
+                    }`}
+                  >
+                    <label>Guardian Name*</label>
+                    <input
+                      type="text"
+                      name="guardianName"
+                      value={formData.guardianName}
+                      onChange={handleChange}
+                      placeholder="Enter guardian name"
+                    />
+                    {errors.guardianName && (
+                      <span className="error-message">
+                        {errors.guardianName}
                       </span>
                     )}
                   </div>
