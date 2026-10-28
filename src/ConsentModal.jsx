@@ -164,7 +164,7 @@ const ConsentModal = ({
       };
 
       const response = await fetch(
-        "https://api.dmetco.net:43331/Api/Patient/InsertConsent",
+        "http://webclass.kcompute.com:8021/api/Patient/InsertConsent",
         {
           method: "POST",
           headers: {
