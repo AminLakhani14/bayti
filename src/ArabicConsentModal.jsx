@@ -232,13 +232,13 @@ const ArabicConsentModal = ({
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className={`form-group ${errors.firstName ? "error" : ""}`}>
-              <label>الاسم الأول*</label>
+              <label>{formType === "Minor" ? "الاسم الأول للمريض*" : "الاسم الأول*"}</label>
               <input
                 type="text"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="أدخل الاسم الأول"
+                placeholder={formType === "Minor" ? "أدخل الاسم الأول للمريض" : "أدخل الاسم الأول"}
               />
               {errors.firstName && (
                 <span className="error-message">{errors.firstName}</span>
@@ -246,13 +246,13 @@ const ArabicConsentModal = ({
             </div>
 
             <div className={`form-group ${errors.lastName ? "error" : ""}`}>
-              <label>الاسم الأخير*</label>
+              <label>{formType === "Minor" ? "الاسم الأخير للمريض*" : "الاسم الأخير*"}</label>
               <input
                 type="text"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="أدخل الاسم الأخير"
+                placeholder={formType === "Minor" ? "أدخل الاسم الأخير للمريض" : "أدخل الاسم الأخير"}
               />
               {errors.lastName && (
                 <span className="error-message">{errors.lastName}</span>

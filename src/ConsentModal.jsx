@@ -231,13 +231,13 @@ const ConsentModal = ({
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className={`form-group ${errors.firstName ? "error" : ""}`}>
-              <label>First Name*</label>
+              <label>{formType === "Minor" ? "Patient First Name*" : "First Name*"}</label>
               <input
                 type="text"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="Enter first name"
+                placeholder={formType === "Minor" ? "Enter patient first name" : "Enter first name"}
                 required
               />
               {errors.firstName && (
@@ -246,13 +246,13 @@ const ConsentModal = ({
             </div>
 
             <div className={`form-group ${errors.lastName ? "error" : ""}`}>
-              <label>Last Name*</label>
+              <label>{formType === "Minor" ? "Patient Last Name*" : "Last Name*"}</label>
               <input
                 type="text"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="Enter last name"
+                placeholder={formType === "Minor" ? "Enter patient last name" : "Enter last name"}
                 required
               />
               {errors.lastName && (
