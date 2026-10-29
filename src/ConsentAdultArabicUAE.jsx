@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ArabicConsentModal from "./ArabicConsentModal";
+import ConsentLogos from "./ConsentLogos";
 
 const ConsentAdultArabicUAE = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -132,28 +133,6 @@ const ConsentAdultArabicUAE = () => {
 </div>
   </div>
   </div>
-  <div className="form-header" style= "margin-bottom: 2rem; font-family: Arial, sans-serif;">
-      <table className="form-metadata" style= "width: 100%; border-collapse: collapse; margin-bottom: 1rem;direction: ltr;display: inline-table; text-align: justify;">
-        <tbody style= "border: 1px solid;">
-          <tr style= "border: 1px solid;">
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">Form Title</strong></td>
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">MAT code</strong></td>  
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">Approval Date</strong></td>
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">Edition</strong></td>
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">Last Revision Date</strong></td>
-            <td style= "border: 1px solid;"><strong style= "margin-left: 10px;">Next Revision Date</strong></td>
-          </tr>
-          <tr>
-            <td style= "border: 1px solid; padding-left: 10px;">Patient Consent Form- Dupixent (Adult- Arabic)</td>
-            <td style= "border: 1px solid; padding-left: 10px;">MAT-AE-2500625/v1/July 2025</td>
-            <td style= "border: 1px solid; padding-left: 10px;">July 2025</td>
-            <td style= "border: 1px solid; padding-left: 10px;">2</td>
-            <td style= "border: 1px solid; padding-left: 10px;">July 2025</td>
-            <td style= "border: 1px solid; padding-left: 10px;">July 2027</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 `;
 
 
@@ -173,6 +152,7 @@ const ConsentAdultArabicUAE = () => {
         formType='Adult'
         Language="Arabic"
       />
+      <ConsentLogos />
       <div
         className="consent-container"
         dir="rtl"
